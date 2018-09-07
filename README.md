@@ -1,4 +1,4 @@
-# React Quiz
+# Redux Quiz
 
 This quiz is designed to test your familiarity with basic Redux 
 state managment. You **must** use redux and **not** React's built in `state` and `setState`.
