@@ -1,15 +1,15 @@
-import { CHANGED_GREETING, CHANGED_NAME } from './reducers';
+import { CHANGE_GREETING, CHANGE_NAME } from './reducers';
 
 export const updateGreeting = greeting => {
   return {
-    type: CHANGED_GREETING,
+    type: CHANGE_GREETING,
     payload: greeting
   };
 };
 
 export const updateName = name => {
   return {
-    type: CHANGED_NAME,
+    type: CHANGE_NAME,
     payload: name
   };
 };
