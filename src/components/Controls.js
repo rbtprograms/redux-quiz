@@ -7,24 +7,24 @@ class Controls extends PureComponent {
   state = {
     greeting: '',
     name: ''
-  }
+  };
 
   static propTypes = {
-    updateGreeting: PropTypes.func,
-    updateName: PropTypes.func,
-  }
+    updateGreeting: PropTypes.func.isRequired,
+    updateName: PropTypes.func.isRequired,
+  };
 
   handleChangeName = ({ target }) => {
     const { updateName } = this.props;
     this.setState({ [target.name]: target.value });
     updateName(this.state.name);
-  }
+  };
 
   handleChangeGreeting = ({ target }) => {
     const { updateGreeting } = this.props;
-    this.setState({ [target.name]: target.value })
+    this.setState({ [target.name]: target.value });
     updateGreeting(this.state.greeting);
-  }
+  };
   render() { 
     const { greeting, name } = this.state;
     return (
