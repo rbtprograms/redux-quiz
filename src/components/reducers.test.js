@@ -6,6 +6,7 @@ import {
 } from './reducers';
 
 describe('reducers', () => {
+
   it('changes the name', () => {
     const payload = 'bobby';
 
@@ -26,4 +27,5 @@ describe('reducers', () => {
 
     expect(state).toBe(payload);
   });
+
 });
