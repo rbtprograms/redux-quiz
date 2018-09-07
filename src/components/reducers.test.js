@@ -1,8 +1,8 @@
 import {
-  // greeting,
+  greeting,
   name,
   NAME_CHANGE,
-  // UPDATE_GREETING
+  CHANGE_GREETING
 } from './reducers';
 
 describe('reducers', () => {
@@ -11,6 +11,16 @@ describe('reducers', () => {
 
     const state = name('', {
       type: NAME_CHANGE,
+      payload
+    });
+
+    expect(state).toBe(payload);
+  });
+  it('changes the greeting', () => {
+    const payload = 'Howdy';
+
+    const state = greeting('', {
+      type: CHANGE_GREETING,
       payload
     });
 
