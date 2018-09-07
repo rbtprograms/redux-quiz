@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 class Display extends PureComponent {
   state = {  }
   render() { 
-    return (  );
+    return (
+      <div>
+        <h3>Hello</h3>
+        <p>Stranger</p>
+      </div>
+    );
   }
 }
  
