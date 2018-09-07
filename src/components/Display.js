@@ -1,16 +1,28 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { getName, getGreeting } from './reducers';
 
 class Display extends PureComponent {
-  state = {  }
+
+  static propTypes = {
+    name: PropTypes.string,
+    greeting: PropTypes.string
+  }
   render() { 
+    const { name, greeting } = this.props;
     return (
       <div>
-        <h3>Hello</h3>
-        <p>Stranger</p>
+        <h3>{greeting}</h3>
+        <p>{name}</p>
       </div>
     );
   }
 }
  
-export default Display;
+export default connect(
+  state => ({
+    name: getName(state),
+    greeting: getGreeting(state)
+  })
+)(Display);
